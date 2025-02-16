@@ -13,8 +13,8 @@ export default function Home() {
   ) => {
     setIsLoading(true);
     try {
-      // Simulated auth delay
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      window.location.href =
+        "https://github.com/login/oauth/authorize?client_id=YOUR_GITHUB_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&scope=user";
 
       toast({
         title: "Success!",
